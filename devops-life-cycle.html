@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager Flowchart</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    svg {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .box, .diamond {
+      fill: #e3f2fd;
+      stroke: #1976d2;
+      stroke-width: 2;
+    }
+
+    .startend {
+      fill: #c8e6c9;
+      stroke: #388e3c;
+    }
+
+    text {
+      font-size: 14px;
+      fill: #0d47a1;
+      font-weight: bold;
+    }
+
+    .arrow {
+      stroke: #455a64;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+    }
+
+    .label {
+      font-size: 12px;
+      fill: #37474f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Task Manager Flowchart</h1>
+<p>This flow shows how tasks are added and managed in the app.</p>
+
+<svg width="600" height="800">
+
+  <!-- Arrowhead Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+            refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#455a64"/>
+    </marker>
+  </defs>
+
+  <!-- Start -->
+  <ellipse cx="300" cy="50" rx="60" ry="30" class="startend"/>
+  <text x="278" y="55">Start</text>
+
+  <!-- Give input (Diamond) -->
+  <polygon points="250,100 350,100 375,140 225,140" class="diamond"/>
+  <text x="265" y="125">Give Input</text>
+
+  <!-- Click Add Button -->
+  <rect x="220" y="160" rx="10" ry="10" width="160" height="40" class="box"/>
+  <text x="238" y="185">Click Add Button</text>
+
+  <!-- Task Added -->
+  <rect x="220" y="220" rx="10" ry="10" width="160" height="40" class="box"/>
+  <text x="230" y="245">Task is Added to List</text>
+
+  <!-- Add Another Task? -->
+  <polygon points="250,280 350,280 375,320 225,320" class="diamond"/>
+  <text x="232" y="305">Want to Add Another Task?</text>
+
+  <!-- Task Completed? -->
+  <polygon points="250,360 350,360 375,400 225,400" class="diamond"/>
+  <text x="245" y="385">Is Task Completed?</text>
+
+  <!-- Click Wrong Button -->
+  <rect x="420" y="370" rx="10" ry="10" width="150" height="40" class="box"/>
+  <text x="440" y="395">Click Wrong Button</text>
+
+  <!-- End -->
+  <ellipse cx="300" cy="470" rx="60" ry="30" class="startend"/>
+  <text x="285" y="475">End</text>
+
+  <!-- Arrows -->
+  <line x1="300" y1="80" x2="300" y2="100" class="arrow"/>
+  <line x1="300" y1="140" x2="300" y2="160" class="arrow"/>
+  <line x1="300" y1="200" x2="300" y2="220" class="arrow"/>
+  <line x1="300" y1="260" x2="300" y2="280" class="arrow"/>
+  <line x1="300" y1="320" x2="300" y2="360" class="arrow"/>
+  <line x1="300" y1="400" x2="300" y2="440" class="arrow"/>
+  <line x1="375" y1="300" x2="340" y2="130" class="arrow"/>
+  <line x1="375" y1="380" x2="420" y2="390" class="arrow"/>
+
+  <!-- Arrow Labels -->
+  <text class="label" x="355" y="295">Yes</text>
+  <text class="label" x="355" y="365">Yes</text>
+  <text class="label" x="310" y="335">No</text>
+  <text class="label" x="310" y="415">No</text>
+
+</svg>
+
+</body>
+</html>
