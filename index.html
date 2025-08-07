@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MoodTune 🎧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MoodTune 🎧</h1>
+    <p>Select your mood and get a song!</p>
+
+    <div class="mood-buttons">
+      <button onclick="setMood('happy')">😊 Happy</button>
+      <button onclick="setMood('sad')">😢 Sad</button>
+      <button onclick="setMood('energetic')">⚡ Energetic</button>
+      <button onclick="setMood('calm')">🌿 Calm</button>
+    </div>
+
+    <div id="suggestion" class="suggestion-box">
+      <p>Select a mood to get started!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
